@@ -1,5 +1,6 @@
 
 import './App.css'
+import { BarGraph } from './components/Bar'
 import { LineGraph } from './components/Line'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <>
-     <LineGraph/>
+     {/* <LineGraph/> */}
+     <BarGraph/>
     </>
   )
 }
