@@ -1,5 +1,6 @@
 import { Line } from "react-chartjs-2"
-import { Chart as ChartJS,CategoryScale,LinearScale,LineElement,PointElement,Title,Tooltip,Legend } from "chart.js"
+import { Chart as ChartJS,CategoryScale,LinearScale,LineElement,PointElement,Title,Tooltip,Legend, plugins } from "chart.js"
+
 ChartJS.register(CategoryScale,LinearScale,LineElement,PointElement,Title,Tooltip,Legend)
 const lineChartData = {
     labels: [
@@ -25,7 +26,16 @@ const lineChartData = {
   };
   
 export const LineGraph=()=>{
-    const options={};
+    const options={
+        reponsive:true,
+        plugins:{
+            legend:{
+                position:"bottom"
+            }
+        }
+    }
+        
+    
     const data=lineChartData
     return(<>
 <Line options={options} data={data}/>
